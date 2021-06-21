@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="ko" class="os_window">
+
 <head>
-<title> 부록 64</title>
-<meta charset="utf-8">
-<style media="screen">
-h1{color:green; text-align: center;}
-h2{text-align: center;}
-h3 { white-space: nowrap; color:blue; text-align: center;}
-p{text-indent:20px;line-height:1.9}
-body {background-color: lightblue; text-align: justify;}
-</style>
+  <title>부록 64 </title>
+  <meta charset="utf-8">
+  <style media="screen">
+    h1 {
+      color: green;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h3 {
+      white-space: nowrap;
+      text-align: center;
+    }
+
+    p {
+      text-indent: 30px;
+      line-height: 25pt;
+      text-align: justify;
+    }
+
+    body {
+      line-height: 25pt;
+      text-indent: 30px;
+      background-color: lightblue;
+      text-align: justify;
+    }
+
+    blockquote {
+      text-indent: 0px;
+      font-size: 2;
+      color: blue;
+      line-height: 25pt;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid black
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 10;
+      right: 90;
+      color: rgb(245, 51, 51)
+    }
+  </style>
 </head>
+
 <body>
-  <h1>부록 64</h1>
+  <header>
+    <h2>부록 64</h2>
+  </header>
+  <h1>부록 64 </h1>
   <h2>사실을 호도하기 위한 표현들</h2>
   <p>
     <div style="line-height:1.9">
@@ -195,7 +251,32 @@ body {background-color: lightblue; text-align: justify;}
     </p>
   <hr>
 
-  <a href="http://www.breadforaday.org/" title="그날의 양식 새창열림" target="_blank" ><img src="http://images.biblemaster.co.kr/NBM/b7.jpg" alt="그날의 양식" /></a>
+  <!-- disqus 설치 코드 -->
+  <div id="disqus_thread"></div>
+  <script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+      var d = document,
+        s = d.createElement('script');
+      s.src =
+        'https://https-syh8293-github-io-yh.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +
+        new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments
+      powered by Disqus.</a></noscript>
+  <!-- disqus  설치 코드 끝 -->
 
 </body>
 </html>
