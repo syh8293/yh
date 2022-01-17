@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko" class="os_window">
+
+<head>
+    <title>역대기상</title>
+    <meta charset="utf-8">
+    <style media="screen">
+        body {
+            margin: 1;
+            background-color: whitesmoke;
+        }
+
+        h1 {
+            border-bottom: 2px solid gray;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h3 {
+            padding-left: 5px;
+            text-align: center;
+        }
+
+        li {
+            line-height: 1.9;
+        }
+
+        p {
+            text-indent: 0px;
+            line-height: 2.5;
+            text-align: justify;
+        }
+
+        #grid ul {
+            border-right: 2px solid gray;
+            width: 50px;
+            margin: 0;
+            padding-left: 30px;
+            padding-right: 0px;
+            padding-top: 25px;
+            text-align: left;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+        }
+
+        #article {
+            padding-left: 40px;
+            padding-top: 0px;
+            margin: 2px;
+        }
+
+        blockquote {
+            font-size: 2;
+            color: blue;
+            line-height: 2.5;
+            text-align: justify;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 10;
+            right: 90;
+            color: rgb(245, 51, 51)
+        }
+
+        .column {
+            column-count: 2;
+            text-align: justify;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h3>역대기상</h3>
+    </header>
+
+    <h1>역대기상</h1><br>
+
+    <input type="button" value="어둘때" onclick="
+    var target = document.querySelector('body');
+        if (this.value === '어둘때'){
+            target.style.backgroundColor='gray';
+            target.style.color='white';
+            this.value = '환할때';
+            
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'brown';
+                i = i + 1;
+            }
+
+        } else {
+            target.style.backgroundColor = 'white';
+            target.style.color='black';
+            this.value = '어둘때';
+
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'black';
+                i = i + 1;
+            }
+        }
+        ">
+
+    <div id="grid">
+        <div class="column">
+            <ul>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%201.html"
+                        target="_blank"><b>1
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%202.html"
+                        target="_blank"><b>2
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%203.html"
+                        target="_blank"><b>3
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%204.html"
+                        target="_blank"><b>4
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%205.html"
+                        target="_blank"><b>5
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%206.html"
+                        target="_blank"><b>6
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%207.html"
+                        target="_blank"><b>7
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%208.html"
+                        target="_blank"><b>8
+                            장</b></a></li>
+                <br>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%209.html"
+                        target="_blank"><b>9
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2010.html"
+                        target="_blank"><b>10
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2011.html"
+                        target="_blank"><b>11
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2012.html"
+                        target="_blank"><b>12
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2013.html"
+                        target="_blank"><b>13
+                            장</b></a></li>
+                <br>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2014.html"
+                        target="_blank"><b>14
+                            장</b></a></li>
+                <br>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2015.html"
+                        target="_blank"><b>15
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2016.html"
+                        target="_blank"><b>16
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2017.html"
+                        target="_blank"><b>17
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2018.html"
+                        target="_blank"><b>18
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2019.html"
+                        target="_blank"><b>19
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2020.html"
+                        target="_blank"><b>20
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2021.html"
+                        target="_blank"><b>21
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2022.html"
+                        target="_blank"><b>22
+                            장</b></a></li>
+                <br>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2023.html"
+                        target="_blank"><b>23
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2024.html"
+                        target="_blank"><b>24
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2025.html"
+                        target="_blank"><b>25
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2026.html"
+                        target="_blank"><b>26
+                            장</b></a></li>
+                <br>
+
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2027.html"
+                        target="_blank"><b>27
+                            장</b></a></li>
+                <br>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2028.html"
+                        target="_blank"><b>28
+                            장</b></a></li>
+                <br>
+                <li><a href="https://syh8293.github.io/yh1/Chronicles1%2029.html"
+                        target="_blank"><b>29
+                            장</b></a></li>
+
+            </ul>
+        </div>
+
+        <div id="article">
+            <p>
+                역대기의 두 권의 책들에는 아담으로부터 시작하여 느부캇네살에
+                의해 예루살렘이 멸망하기까지 등장하는 역사적 인물들의 목록과
+                역사적 사건의 목록들이 연대기적으로 정리되어 기록되어 있다.
+                역대기상은 다윗의 죽음과, 솔로몬이 이 땅 위에 세워지는 지상
+                왕국인 "천국"의 보좌에 오르는 것으로 끝난다. 이 책의
+                기록자는 대개 서기관 에스라 (스 7:6)로 보는데,
+                B.C.457년경에 기록한 것으로 보인다.
+            </p>
+            <blockquote>
+                <b>스 7:6</b> 이 에스라가 바빌론에서 올라왔으니 그는
+                이스라엘의 주 하나님께서 주셨던 모세의 율법에 익숙한
+                서기관인데 그에게 내린 주 그의 하나님의 도우심대로 왕이 그의
+                요구하는 것을 다 허락하였더라.
+            </blockquote>
+
+            <p>
+                &lt칠십인역&gt에서는 이 책을 "파랄레이 포메나"
+                (Παραλει πομένα)라고 부르는데, "지나쳐 버란
+                것들" (things overlooked)이라는 의미이다.
+                이런 의미가 주어진 이유는, 역대기상에서는 창세기, 출애굽기,
+                민수기, 여호수아, 재판관기, 사무엘상하, 열왕기상하에
+                언급되지 않은 내용들을 다루고 있기 때문이다. 이는 다윗의
+                생애 가운데 일어났던 많은 일들이 사무엘상하에서는 빠져있는
+                이유이기도 하다.
+            </p>
+            <p>
+                역대기상은 29장, 942절, (영어 &lt킹제임스
+                성경&gt의 경우) 20,365단어로 구성되어 있다.
+            </p>
+            <p>
+                열왕기하 서문에서 언급했듯이, "역대기상하"는 자신의 무지를
+                마음껏드러내는 라오디케아 교회 시대의 성경 비평가들이 아주
+                좋아하는 책이다. 그러나 결코 잊지말아야 하는 것은 이런
+                명백해 보이는 모순들을 다룰 때, 열왕기하 서문에서 언급한
+                설명에 주목해야 한다는 것이다. 부언한다면, 성경에서 사람
+                이름이나 지명을 언급할 때 같은 이름에 대해서 한 가지 이상의
+                이름이 더 있거나, 한 가지 이상의 철자들로 표기되기도 한다는
+                사실 (행 1:23, 신 3:9)도 알아야 한다.
+                "이스탄불"은 "비잔티움," "콘스탄티노를"과 같은 이름의
+                도시이다. Jean, John, Johann은 모두 동일한
+                이름이다.
+            </p>
+            <blockquote>
+                <b>행 1:23</b> 그리하여 그들이 두 사람을 세우니 한
+                사람은 바사바라고도 하고 유스토라고도 부르는 요셉이요, 또 한
+                사람은 맛디아더라.<br>
+
+                <b>신 3:9</b> 헤르몬 산을 시돈인들은 시리온이라
+                불렀고 아모리인들은 스닐이라고 불렀더라.
+            </blockquote>
+
+            <p>
+                역대기상하의 연대기를 공부하는 데 도움이 되는 책으로, 테리의
+                &ltBiblical Hermeneutics&gt&#44
+                로버트 앤더슨의 고전적인 책 &ltThe Coming
+                Prince&gt&#44 그리고 클린턴의 &ltSystem
+                of Chronology&gt를 추천한다.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
