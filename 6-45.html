@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>로또 추첨기</title>
+  </head>
+
+  <body>
+    <div id="show"></div>
+    <script>
+      //45개의 후보 숫자 만들기 - 
+      //제로초님은 Array(45)로 empty 배열(45개의 undefined)을 만든 후 map()을 사용
+      const candidates = [];
+      for (i = 1; i <= 45; i += 1) {
+        candidates.push(i);
+      }
+      //숫자 섞기
+      let mixedNum = [];
+      //for문을 사용하면 안되는 이유: splice()로 candidate 배열아느이 요소가 점점 줄어줄기 때문
+      //for문: 몇번을 반복하는지 알때
+      //while문: 몇번을 반복하는지 모를때. 기준값이 계속 바뀔때
+
+      //for문을 썼을 경우
+      //        for(let j=1; j<=candidates.length; j+=1) {
+      //            let num = Math.floor(Math.random() * candidates.length);
+      //            candidates.splice(num, 1);
+      //            mixedNum.push(num);   
+      //        }
+      //결과: (23) [13, 23, 24, 27, 3, 32, 27, 8, 29, 2, 10, 7, 17, 18, 4, 17, 9, 14, 1, 8, 1, 15, 16]
+
+      //while문을 썼을 경우
+      while (candidates.length > 0) {
+        let num = Math.floor(Math.random() * candidates.length); //0-44까지의 정수
+        //candidates에서 num을 splice()로 하나씩 빼줌
+        let leftNum = candidates.splice(num, 1)[0]; //leftNum 배열이므로 [0]
+        mixedNum.push(leftNum);
+      }
+      console.log(mixedNum);
+      let bonus = mixedNum[mixedNum.length - 1] //mixedNum의 마지막 숫자
+      console.log(bonus);
+
+
+      //slice() 예제
+      let lottoNum = mixedNum.slice(0, 6).sort((prev, curr) => prev - curr); //배열의 0-5번째 요소 추출
+      console.log(lottoNum);
+      //prev - curr 뺀 결과가 양수면 순서를 바꿈. 음수면 그대로.
+
+
+      //splice() 예제
+      let lottoNum2 = mixedNum.splice(0, 6); //배열의 0부터 6개의 요소 추출
+      console.log(lottoNum2);
+      console.log(lottoNum2);
+
+
+      console.log(`로또숫자 ${lottoNum} / 보너스 숫자 ${bonus}`)
+
+      //로또 화면 출력
+      let show = document.querySelector("#show");
+
+      //중복안되는 부분(다른)은 매개변수로 만들고, 중복되는 부분은 함수로 { }안에 넣는다.
+      function showFn(num, show) {
+        let ball = document.createElement('span');
+        //ball.textContent = lottoNum[num];
+        ball.textContent = num;
+        show.appendChild(ball);
+
+        //ball css            
+        if (num < 10) {
+          color = 'yellow';
+        } else if (num < 20) {
+          color = 'aqua';
+        } else if (num < 30) {
+          color = 'pink';
+        } else if (num < 40) {
+          color = 'skyblue';
+        } else {
+          color = 'gold';
+        }
+
+        ball.style.backgroundColor = color;
+        ball.style.display = 'inline-block';
+        ball.style.margin = '10px';
+        ball.style.padding = '15px';
+        ball.style.borderRadius = '50%';
+        //ball class 이름 삽입
+        ball.className = 'No' + lottoNum[num];
+
+      };
+
+      //로또 번호 1초에 하나씩 출현
+      //클로저 문제
+      for (let i = 0; i < lottoNum.length; i += 1) {
+        //closure함수의 매개변수 j는 function scope 성격으로 밖으로 나가지 못함.
+        function closure(j) { //i의 값(0~5)를 j에게 전달
+          //함수안에서 j의 값만 그대로 사용
+          setTimeout(function() {
+            showFn(lottoNum[j], show);
+          }, j * 1000);
+        }
+        closure(i); //i가 0-5까지의 값
+      }
+
+      //보너스 공 7초 후 출현
+      setTimeout(function() {
+        showFn(bonus, show);
+      }, 7000);
+
+    </script>
+  </body>
+
+</html>
