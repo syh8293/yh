@@ -3,7 +3,13 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>로또 추첨기</title>
+    <title>lottoNum</title>
+    <style>
+      body {
+      font-style: italic;
+      font-size:xx-large;
+      }
+    </style>
   </head>
 
   <body>
@@ -53,7 +59,7 @@
       console.log(lottoNum2);
 
 
-      console.log(`로또숫자 ${lottoNum} / 보너스 숫자 ${bonus}`)
+      //console.log(`로또숫자 ${lottoNum} / 보너스 숫자 ${bonus}`)
 
       //로또 화면 출력
       let show = document.querySelector("#show");
@@ -76,13 +82,14 @@
           color = 'skyblue';
         } else {
           color = 'gold';
-        }
+        } 
 
         ball.style.backgroundColor = color;
         ball.style.display = 'inline-block';
-        ball.style.margin = '10px';
-        ball.style.padding = '15px';
-        ball.style.borderRadius = '50%';
+        ball.style.margin = '20px';
+        ball.style.padding = '25px';
+        ball.style.borderRadius = '80%';
+        ball.style.textSize = 40;
         //ball class 이름 삽입
         ball.className = 'No' + lottoNum[num];
 
@@ -100,11 +107,6 @@
         }
         closure(i); //i가 0-5까지의 값
       }
-
-      //보너스 공 7초 후 출현
-      setTimeout(function() {
-        showFn(bonus, show);
-      }, 7000);
 
     </script>
   </body>
