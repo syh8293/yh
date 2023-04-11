@@ -6,13 +6,25 @@
     <title>lottoNum</title>
     <style>
       body {
-      font-style: italic;
-      font-size:xx-large;
+        font-style: italic;
+        font-size:xx-large;
+      }
+       
+      table, tr, td {
+        border: 3px solid black;
+        border-radius: 10px;
+        border-color: red ;
+        border-style:outset;
+        background-color:bisque;
       }
     </style>
   </head>
 
-  <body>
+  <body style="margin-top:10%">
+    <table style="width:800" height="200"
+      align="center" >
+    <tr>
+      <td>
     <div id="show"></div>
     <script>
       //45개의 후보 숫자 만들기 - 
@@ -59,8 +71,6 @@
       console.log(lottoNum2);
 
 
-      //console.log(`로또숫자 ${lottoNum} / 보너스 숫자 ${bonus}`)
-
       //로또 화면 출력
       let show = document.querySelector("#show");
 
@@ -89,7 +99,7 @@
         ball.style.margin = '20px';
         ball.style.padding = '25px';
         ball.style.borderRadius = '80%';
-        ball.style.textSize = 40;
+        ball.style.textSize = 100;
         //ball class 이름 삽입
         ball.className = 'No' + lottoNum[num];
 
@@ -109,6 +119,9 @@
       }
 
     </script>
+    </td>
+    </tr>
+    </table>
   </body>
 
 </html>
