@@ -20,7 +20,7 @@
     </style>
   </head>
 
-  <body style="margin-top:10%">
+  <body style="margin-top:40%">
     <table style="width:800" height="200"
       align="center">
     <tr>
@@ -99,7 +99,6 @@
         ball.style.margin = '20px';
         ball.style.padding = '25px';
         ball.style.borderRadius = '80%';
-        ball.style.textSize = 100;
         //ball class 이름 삽입
         ball.className = 'No' + lottoNum[num];
 
@@ -113,7 +112,7 @@
           //함수안에서 j의 값만 그대로 사용
           setTimeout(function() {
             showFn(lottoNum[j], show);
-          }, j * 1000);
+          }, j * 200);
         }
         closure(i); //i가 0-5까지의 값
       }
