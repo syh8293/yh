@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYH HOME</title>
+</head>
+<body>
+    <h1>YH</h1>
+
+    <form id="postForm">
+        <label for="date">날짜:</label>
+        <input type="text" id="date"
+            placeholder="               년     월      일"
+            required><br><br>
+
+        <form id="postForm">
+            <label for="date">제목:</label>
+            <input type="text" id="date"
+                placeholder="               "
+                required><br><br>
+
+        <label for="image">이미지:</label><br>
+        <input type="file" id="image">
+        <br><br>
+
+        <label for="video">동영상:</label><br>
+        <input type="file" id="video">
+        <br><br>
+
+        <label for="text">내용</label><br>
+        <textarea id="text" rows="4"
+            required></textarea><br><br>
+
+        <button type="button" onclick="submitPost()">등록</button>
+    </form>
+
+    <div id="posts">
+        <!-- 여기에 게시물이 나타날 곳 -->
+    </div>
+
+    <script>
+        function submitPost() {
+            // 입력된 값 가져오기
+            var date = document.getElementById('date').value;
+            var text = document.getElementById('text').value;
+
+            // 게시물 생성
+            var post = document.createElement('div');
+            post.innerHTML = '<p><strong>' + date + '</strong></p><p>' + text + '</p>';
+            
+            // 이미지 처리
+            var imageInput = document.getElementById('image');
+            if (imageInput.files && imageInput.files[0]) {
+                var image = document.createElement('img');
+                image.src = URL.createObjectURL(imageInput.files[0]);
+                post.appendChild(image);
+            }
+
+            // 동영상 처리
+            var videoInput = document.getElementById('video');
+            if (videoInput.files && videoInput.files[0]) {
+                var video = document.createElement('video');
+                video.src = URL.createObjectURL(videoInput.files[0]);
+                video.controls = true;
+                post.appendChild(video);
+            }
+
+            // 게시물을 게시판에 추가
+            document.getElementById('posts').appendChild(post);
+
+            // 입력 필드 초기화
+            document.getElementById('date').value = '';
+            document.getElementById('image').value = '';
+            document.getElementById('video').value = '';
+            document.getElementById('text').value = '';
+        }
+    </script>
+</body>
+</html>
